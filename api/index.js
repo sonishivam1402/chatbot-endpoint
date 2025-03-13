@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Get API key from environment variable
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = "AIzaSyB7LUmSBt01kl-8uCXsGiZQj25on5JF764";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 // Initialize the model
