@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 
 # Get API key from environment variable (safer than hardcoding)
-#api_key = os.environ.get('GEMINI_API_KEY')
-client = genai.Client(api_key="AIzaSyB7LUmSBt01kl-8uCXsGiZQj25on5JF764")
+api_key = os.environ.get('GEMINI_API_KEY')
+client = genai.Client(api_key=api_key)
 
 @app.route('/api/ask', methods=['POST'])
 def answer_question():
